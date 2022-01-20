@@ -4,7 +4,7 @@ from dataclasses import dataclass
 
 
 @dataclass(frozen=True)
-class Genres:
+class Genre:
     __slots__ = ('id', 'name', 'description', 'created_at', 'updated_at')
     id: str
     name: str
@@ -14,7 +14,7 @@ class Genres:
 
 
 @dataclass(frozen=True)
-class FilmWorks:
+class FilmWork:
     __slots__ = ('id', 'title', 'description', 'creation_date', 'certificate',
                  'file_path', 'rating', 'type', 'created_at', 'updated_at')
     id: str
@@ -30,7 +30,7 @@ class FilmWorks:
 
 
 @dataclass(frozen=True)
-class Persons:
+class Person:
     __slots__ = ('id', 'full_name', 'birth_date', 'created_at', 'updated_at')
     id: str
     full_name: str
@@ -40,7 +40,7 @@ class Persons:
 
 
 @dataclass(frozen=True)
-class GenreFilmWorks:
+class GenreFilmWork:
     __slots__ = ('id', 'film_work_id', 'genre_id', 'created_at')
     id: str
     film_work_id: str
@@ -49,7 +49,7 @@ class GenreFilmWorks:
 
 
 @dataclass(frozen=True)
-class PersonFilmWorks:
+class PersonFilmWork:
     __slots__ = ('id', 'film_work_id', 'person_id', 'role', 'created_at')
     id: str
     film_work_id: str
